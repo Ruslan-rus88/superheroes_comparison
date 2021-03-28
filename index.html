@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super-stats</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- for google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <h1>Super-stats</h1>
+    <div class="info">Compare stats of different superheroes.<br>
+        Find superheroes to compare using search, or click 'Random' to select a random superhero.<br>
+        Once you have selected all the heroes you want to compare. Click 'Compare'.
+    </div>
+    <div class="form">
+        <input class="input" type="text" placeholder="Search for a superhero">
+        <button class="btn" onclick="searchFunc()">Search</button>
+        <button class="btn" onclick="randomFunc()">Random</button>
+        <button class="btn" onclick="compare()">Compare <span class="number-of-compared-items"></span></button>
+    </div>
+    <div class="search-results"></div>
+    <div class="output">
+        <div id="chart"></div>
+        <div class="options_container">
+            <button class="option active" id="Intelligence" onclick="addRemoveClass(this)">intelligence</button>
+            <button class="option active" id="strength" onclick="addRemoveClass(this)">strength</button>
+            <button class="option active" id="speed" onclick="addRemoveClass(this)">speed</button>
+            <button class="option active" id="durability" onclick="addRemoveClass(this)">durability</button>
+            <button class="option active" id="power" onclick="addRemoveClass(this)">power</button>
+            <button class="option active" id="combat" onclick="addRemoveClass(this)">combat</button>
+        </div>    
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
